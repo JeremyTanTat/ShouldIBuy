@@ -1,0 +1,28 @@
+target Singapore market.
+
+allow user to enter:
+1. Item name & Price.
+2. Photo & price (or photo with price).
+
+
+Then show advice:
+- Reasonable
+- Too expensive
+- Good deal
+
+Show reference:
+- New price at where?
+- Resale price at where.
+- put up to 3 references only.
+
+Put disclaimer:
+
+Als put:
+- Don't overspend, avoid duplicate item.
+- Keep saving habit to build financial freedom (give a quote)
+
+Website function:
+- Allow user input, include photos.
+- Resource: Google, official retailer website or ecommerce platform. include resale market online. 
+- Chinese translation
+- Only limited to item with price SGD5k or below. If more than that, prompt user that the item is too costly to evaluate. Please consider and study deeper before making the decision.

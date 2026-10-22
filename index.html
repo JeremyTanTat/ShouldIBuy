@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should I Buy?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <button id="langBtn" class="lang" type="button">中文</button>
+  <header>
+    <svg class="face" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="68" r="42" fill="#ffd966" stroke="#333" stroke-width="3"/>
+      <path d="M36 50 Q46 42 55 48" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M68 44 Q80 38 88 46" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="46" cy="62" r="7" fill="#fff" stroke="#333" stroke-width="2"/><circle cx="49" cy="59" r="3" fill="#333"/>
+      <circle cx="78" cy="62" r="7" fill="#fff" stroke="#333" stroke-width="2"/><circle cx="81" cy="59" r="3" fill="#333"/>
+      <path d="M48 88 Q62 84 76 90" stroke="#333" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="98" cy="22" r="5" fill="#fff" stroke="#333" stroke-width="2"/>
+      <circle cx="108" cy="12" r="3" fill="#fff" stroke="#333" stroke-width="2"/>
+      <text x="76" y="22" font-size="20" font-weight="bold" fill="#333">?</text>
+    </svg>
+    <h1>Should I Buy?</h1>
+    <p data-i="tag">Quick price check for Singapore shoppers</p>
+  </header>
+
+  <form id="form">
+    <label><span data-i="name">Item name</span>
+      <input id="name" maxlength="150" placeholder="e.g. Sony WH-1000XM5">
+    </label>
+    <label><span data-i="photo">Photo (optional – price tag on photo will be auto-detected)</span>
+      <input id="photo" type="file" accept="image/*">
+    </label>
+    <img id="preview" alt="" hidden>
+    <label><span data-i="price">Price you see (SGD)</span>
+      <input id="price" type="number" min="0" step="0.01" placeholder="e.g. 299">
+    </label>
+    <p id="ocr" class="hint" hidden></p>
+    <button type="submit" id="go" data-i="go">Should I buy it?</button>
+  </form>
+
+  <section id="result" hidden></section>
+
+  <section class="notes">
+    <p data-i="caution">💡 Always be cautious with shopping. Don't overspend, and avoid buying duplicate items.</p>
+    <blockquote id="quote"></blockquote>
+    <p class="disclaimer" data-i="disc">Disclaimer: This is only a pricing guide, not a decision maker. Prices may be outdated or inaccurate; always verify with the seller.</p>
+  </section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
